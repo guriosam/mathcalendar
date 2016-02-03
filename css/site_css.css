@@ -1,0 +1,97 @@
+/*
+Theme Name: MathCalendar V1
+Author: Caio Barbosa
+*/
+
+/* normalize margin, padding */
+html, footer, body, div, dl, dt, dd, ul, ol, li, 
+h1, h2, h3, h4, h5, h6, pre, input, 
+p, blockquote, th, td, img {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-family: helvetica, calibri, sans-serif;
+	line-height: 1.0em;
+	background-color: #fff;
+	height: 100%;
+	width: 100%;
+}
+
+/* Header */
+
+#header{
+	height: 10%;
+	position: fixed;
+	background-color: #fff;
+	border-bottom: solid 1px #000;
+	width: 100%;
+}
+
+#header .name{
+	font-family: roboto;
+	font-size: 25px;
+	text-align: center;
+}
+
+#header .language{
+	padding-top: 10px;
+	margin-left: 10px;
+	width: 100px;
+}
+
+#header .divisor{
+	margin-top: 0.5%;
+	border-bottom: solid 1px #0040ff;
+}
+
+/* Download Section */
+#wrapper{
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+	
+}
+
+img#phone{
+	width: 38%;
+	margin-top: -70px;
+	padding: 10px;
+	position: fixed;
+	left: 50px;
+	
+}
+
+img#play{
+	width: 20%;
+	margin-top: 500px;
+	padding: 100px;
+	position: fixed;
+	
+	right: 300px;
+	
+}
+    
+/* Footer */
+#footer{
+   position: fixed;
+   bottom: 0;
+   background-color: #0040ff;
+   height: 80px;
+   width: 100%;
+}
+
+#footer .download{
+	padding-top: 10px;
+}
+
+#footer .appstore-logo{
+	padding-top: 10px;
+	height: 40px;
+}
