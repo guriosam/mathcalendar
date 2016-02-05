@@ -52,7 +52,7 @@ body {
 	border-bottom: solid 1px #f2f2f2;
 }
 
-/* Download Section */
+/* Top Content Section */
 #wrapper{
 	background-color: #000;
 	width: 100%;
@@ -64,16 +64,40 @@ body {
 	width: 100%;
 }
 
+#wrapper .img{
+	height: 100%;
+	width: 35%;
+	float: left;
+}
+
+#wrapper .text{
+	width: 50%;
+	float: right;
+	color: #f2f2f2;
+	margin-right: 50px;
+	padding-top: 50px;
+	margin-top: 150px;
+	text-align: justify;
+}
+
+img#phone{
+	z-index: 0;
+	padding: 10px;
+	width: 100%;	
+}
+
+/* Middle Content Section */
 #middle-content{
 	height: 100%;
 	width: 100%;
 	background-color: #f2f2f2;
+	margin-bottom: 50px;
 }
 
 #middle-content .video{
 	position: center;
 	height: 100%;
-	margin-bottom: 50px;
+	margin-bottom: 80px;
 	margin-top: 10px;
 	
 }
@@ -94,28 +118,53 @@ body {
 } 
 
 
-
-#wrapper .img{
-	height: 100%;
-	width: 35%;
-	float: left;
+#middle-content-2{
+	height: 50%;
+	width: 100%;
+	background-color: black;
 }
 
-#wrapper .text{
-	width: 50%;
-	float: right;
-	color: #f2f2f2;
-	margin-right: 50px;
-	padding-top: 50px;
-	margin-top: 200px;
+#middle-content-2 .text{
 	text-align: justify;
+	color: #f2f2f2;
+	width: 100%;
+	margin-left: 40px;
 }
 
-img#phone{
-	z-index: 0;
-	padding: 10px;
-	width: 100%;	
+#grad2 {
+	height: 15%;
+	background: #f2f2f2; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(#f2f2f2, gray , black); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom, #f2f2f2, black); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom, #f2f2f2, black); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom, #f2f2f2 , black); /* Standard syntax */
+} 
+
+
+#end-content{
+	
 }
+
+#end-content .title-3{
+	text-align: justify;
+	color: black;
+	width: 100%;
+}
+
+#end-content .comment{
+	
+	background-color: #e6e6e6;
+}
+
+#end-content .comment-1{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align: justify;
+	color: black;
+	width: 95%;
+	margin-left: 40px;
+}
+
 
 img#play{
 	width: 20%;
@@ -126,12 +175,14 @@ img#play{
 }
 
 img#google_play{
-	width: 10%;
-	margin-top: -5px;
-	margin-left: 20px;
-	position: fixed;
+	z-index: 0;
+	width: 8%;
+	height: 40px;
+	margin-left: 200px;
+
 }
     
+	
 /* Footer */
 #footer{
    position: fixed;
@@ -147,7 +198,7 @@ img#google_play{
 	height: 5px;
 }
 
-#footer .logo{
+#middle-content-2 .logo{
 	margin-top: 20px;
 	margin-left: -145px;
 }

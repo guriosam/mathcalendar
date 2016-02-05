@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 
-<title>Calendrier Mathématic</title>
+<title>Calendário Matemático</title>
 
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
@@ -20,6 +20,110 @@
 
 <body>
 
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+	
+	<script>
+        jQuery(document).ready(function ($) {
+            
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:1200,$Opacity:2}
+            ];
+            
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+            
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 600);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+        });
+    </script>
+
+	
+    <style>
+        
+        /* jssor slider bullet navigator skin 05 css */
+        /*
+        .jssorb05 div           (normal)
+        .jssorb05 div:hover     (normal mouseover)
+        .jssorb05 .av           (active)
+        .jssorb05 .av:hover     (active mouseover)
+        .jssorb05 .dn           (mousedown)
+        */
+        .jssorb05 {
+            position: absolute;
+        }
+        .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 16px;
+            height: 16px;
+            background: url('img/b05.png') no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .jssorb05 div { background-position: -7px -7px; }
+        .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+        .jssorb05 .av { background-position: -67px -7px; }
+        .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+        /* jssor slider arrow navigator skin 12 css */
+        /*
+        .jssora12l                  (normal)
+        .jssora12r                  (normal)
+        .jssora12l:hover            (normal mouseover)
+        .jssora12r:hover            (normal mouseover)
+        .jssora12l.jssora12ldn      (mousedown)
+        .jssora12r.jssora12rdn      (mousedown)
+        */
+        .jssora12l, .jssora12r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 30px;
+            height: 46px;
+            cursor: pointer;
+            background: url('img/a12.png') no-repeat;
+            overflow: hidden;
+        }
+        .jssora12l { background-position: -16px -37px; }
+        .jssora12r { background-position: -75px -37px; }
+        .jssora12l:hover { background-position: -136px -37px; }
+        .jssora12r:hover { background-position: -195px -37px; }
+        .jssora12l.jssora12ldn { background-position: -256px -37px; }
+        .jssora12r.jssora12rdn { background-position: -315px -37px; }
+    </style>
+
+
+   
 	<!-- Start header -->
 	<div id="header">
 
@@ -32,7 +136,7 @@
 
 		<div class="name">
 			</br>
-			<p> Calendrier Mathématique 2016 </p>
+			<p> Calendário Matemático 2016 </p>
 		</div>
 
 		<div class="divisor">
@@ -41,12 +145,36 @@
 	</div>
 	<!-- End header -->
 
+	<!-- Start content -->
 	<div id="wrapper">
 
 		<div class="content">
 
 			<div class="img">
-				<img id="phone" src="img/phone/model.png">
+				<!--<img id="phone" src="img/phone/model.png">-->
+				<div id="jssor_1" style="position: relative; margin: 50px 70px auto; top: 0px; left: 0px; width: 400px; height: 450px; overflow: hidden; visibility: hidden;">
+					<!-- Loading Screen -->
+					<div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+						<div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+						<div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+					</div>
+					<div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 250px; height: 390px; overflow: hidden;">
+						<div data-p="112.50" style="display: none;">
+							<img data-u="image" src="img/phone/model2.png" />
+						</div>
+						<div data-p="112.50" style="display: none;">
+							<img data-u="image" src="img/phone/model2.png" />
+						</div>
+						<div data-p="112.50" style="display: none;">
+							<img data-u="image" src="img/phone/model2.png" />
+						</div>
+					</div>
+					<!-- Bullet Navigator -->
+					
+					
+				</div>
+
+   
 			</div>
 			
 			<div class="text">
@@ -67,9 +195,7 @@
 		</div>
 
 	</div>
-	
-	
-	
+		
 	<div id="middle-content">
 	
 		<div id="grad1">
@@ -77,9 +203,7 @@
 			<center>
 				<a> 
 					</br>
-					</br></br>
-						Veja aqui um vídeo sobre os nós selvagens: 
-					</br></br>
+					
 					</br></br>
 				</a>
 			</center>
@@ -93,7 +217,9 @@
 			<div class="video">
 			
 				<div class="middle-title">
-				
+					</br></br>
+						<center> Veja aqui um vídeo sobre os nós selvagens: </center>
+					</br></br>
 				</div>
 								
 				<center> <iframe width="854" height="480" src="https://www.youtube.com/embed/wJhht6di02E" frameborder="0" allowfullscreen></iframe> </center>
@@ -101,8 +227,114 @@
 			</div>
 
     </div>				
+	
+	<div id="middle-content-2">
+	
+		<div id="grad2">	
 			
-	<div id="footer">
+			</br></br>
+			</br>
+			</br>
+		</div>
+		
+		<div class="text">
+		
+			</br></br></br>
+			<a> Baixe aqui a versão android do aplicativo do calendário com todos os problemas: </a>
+			</br></br>
+			
+			<div class="logo">
+				<img id="google_play" src="img/logo/play.png">
+			</div>		
+			</br></br></br>
+			<a>	Compre aqui o livro do calendário com todos os problemas, textos e soluções: </a>
+			</br></br></br>
+			<a>	Veja outras versões deste calendário mundo a fora: </a>
+			</br></br></br>
+						 
+					</br></br>
+					</br></br>
+				</a>
+				
+				
+		
+		</div>
+	
+	
+			
+	
+	</div>
+	
+	<div id="grad1">	
+			
+			</br></br>
+			</br>
+			</br>
+		</div>
+
+	
+	<div id="end-content">
+			
+			
+				<a> 
+					</br>
+					</br></br>
+						<div class="title-3">
+							<center>Veja o que as pessoas que compraram o calendário acham: </center> </br></br></br>
+						</div>
+						
+						<div class="comment">
+						
+							<div class="comment-1">
+							</br>
+								Laurence LABBE - Crítica literária, França </br></br>
+								“Um calendário bonito para todos os interessados ou gostam de brincar com quebra-cabeças de Matemática com respostas em um pequeno 
+								livro de mão. Belas imagens, em suma uma ideia muito agradável do presente. 
+							</br></br>
+						
+							</div>
+						
+						</div>
+						
+						<div class="comment">
+						
+							<div class="comment-1">
+							</br>
+								GUILLBE - Oetrange, Luxembourg </br></br>
+								“Exercícios de matemática para a prática diária para manter a massa cinzenta lubrificada!”
+						
+							</br></br>
+						
+							</div>
+						
+						</div>
+						
+						<div class="comment">
+						
+							<div class="comment-1">
+							</br>
+								Lilly – França </br></br>
+								Um probleminha para resolver diariamente, e em cada mês uma pequena explicação sobre um tema matemático. Comprei para um amigo que 
+								adora Matemática, espero que ele goste!
+						
+							</br></br>
+						
+							</div>
+						
+						</div>
+					
+				
+				</a>
+					
+			</br>
+			</br>
+		</div>
+	
+	</div>
+	
+	<!-- End content -->
+	
+	<!--<div id="footer">
 
 				<div class="download">
 					<center> <a> -- Download -- </a> </center>
@@ -112,6 +344,6 @@
 					<center> <img id="google_play" src="img/logo/play.png"> </center>
 				</div>		
 
-			</div>
-
+	</div>
+		-->	
 </body>
