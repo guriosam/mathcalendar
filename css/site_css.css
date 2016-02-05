@@ -27,6 +27,7 @@ body {
 /* Header */
 
 #header{
+	z-index: 1;	
 	height: 10%;
 	position: fixed;
 	background-color: #fff;
@@ -48,24 +49,72 @@ body {
 
 #header .divisor{
 	margin-top: 0.5%;
-	border-bottom: solid 1px #0040ff;
+	border-bottom: solid 1px #f2f2f2;
 }
 
 /* Download Section */
 #wrapper{
 	background-color: #000;
 	width: 100%;
+	height: 100%;	
+}
+
+#wrapper .content{
 	height: 100%;
+	width: 100%;
+}
+
+#middle-content{
+	height: 100%;
+	width: 100%;
+	background-color: #f2f2f2;
+}
+
+#middle-content .video{
+	position: center;
+	height: 100%;
+	margin-bottom: 50px;
+	margin-top: 10px;
 	
 }
 
+#middle-content .middle-title{
+	height: 10%;
+	position: center;
+	background-color: #f2f2f2;
+}
+
+#grad1 {
+	height: 15%;
+	background: #f2f2f2; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(black, gray , #f2f2f2); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom, black, #f2f2f2); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom, black, #f2f2f2); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom, black , #f2f2f2); /* Standard syntax */
+} 
+
+
+
+#wrapper .img{
+	height: 100%;
+	width: 35%;
+	float: left;
+}
+
+#wrapper .text{
+	width: 50%;
+	float: right;
+	color: #f2f2f2;
+	margin-right: 50px;
+	padding-top: 50px;
+	margin-top: 200px;
+	text-align: justify;
+}
+
 img#phone{
-	width: 38%;
-	margin-top: -70px;
+	z-index: 0;
 	padding: 10px;
-	position: fixed;
-	left: 50px;
-	
+	width: 100%;	
 }
 
 img#play{
@@ -73,9 +122,14 @@ img#play{
 	margin-top: 400px;
 	padding: 100px;
 	position: fixed;
-	right: 300px;
-	
-	
+	left: 300px;	
+}
+
+img#google_play{
+	width: 10%;
+	margin-top: -5px;
+	margin-left: 20px;
+	position: fixed;
 }
     
 /* Footer */
@@ -83,15 +137,17 @@ img#play{
    position: fixed;
    bottom: 0;
    background-color: #0040ff;
-   height: 80px;
+   height: 12%;
    width: 100%;
 }
 
 #footer .download{
-	padding-top: 10px;
+	margin-left: 30px;
+	margin-top: 15px;
+	height: 5px;
 }
 
-#footer .appstore-logo{
-	padding-top: 10px;
-	height: 40px;
+#footer .logo{
+	margin-top: 20px;
+	margin-left: -145px;
 }
