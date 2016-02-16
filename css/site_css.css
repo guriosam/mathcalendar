@@ -76,7 +76,6 @@ body {
 	height: 100%;
 	width: 40%;
 	float: left;
-	
 }
 
 #wrapper .text{
@@ -88,6 +87,7 @@ body {
 	margin-top: 150px;
 	text-align: justify;
 }
+
 
 img#phone{
 	z-index: 0;
