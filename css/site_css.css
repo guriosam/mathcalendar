@@ -63,11 +63,15 @@ body {
 }
 
 #wrapper .content{
-	height: 100%;
-	width: 100%;
+	position: center;
+	vertical-align: center;
+	height: 60%;
+	width: 90%;
 }
 
 #wrapper .img{
+	position: center;
+	vertical-align: center;
 	height: 100%;
 	width: 40%;
 	float: left;
